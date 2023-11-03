@@ -1,9 +1,17 @@
+:root{
+    --blue-color:#0075ff;
+    --blue-alt-color:#0d69d5;
+    --orange-color:#f59e0b;
+    --green-color:#22c55e;
+    --red-color:#f44336;
+    --grey-color:#888;
+}
 *{box-sizing: border-box;}
 
 body{font-family: 'Open Sans', sans-serif;
 margin: 0;}
 
-*:focus{display: none;}
+*:focus{outline: none;}
 
 a{text-decoration: none;}
 
@@ -13,6 +21,15 @@ ul{
     padding: 0;
 }
 
+::-webkit-scrollbar{
+    width: 15px;
+}
+
+::-webkit-scrollbar-track{background-color: white;}
+
+::-webkit-scrollbar-thumb{background-color: var(--blue-color);}
+
+::-webkit-scrollbar-thumb:hover{background-color: var(--blue-alt-color);}
 .page{
     background-color: #f1f5f9;
     min-height: 100vh;
@@ -42,14 +59,14 @@ ul{
 
 .sidebar > h3::before{
     width: 50%;
-    height: 4px;
+    height: 2px;
    bottom: -70%;
 }
 .sidebar > h3::after{
-    width: 15px;
-    height: 15px;
+    width: 12px;
+    height: 12px;
     border-radius: 50%;
-    top: 23px;
+    top: 25px;
     border: 4px solid white;
 }
 
@@ -79,3 +96,213 @@ text-align: center;}
 .sidebar > h3::after{display: none;}
 
 .sidebar ul li a span{display: none;}}
+
+/* Head */
+.content{overflow: hidden;}
+
+.content .head .search::before{
+    font-family:var(--fa-style-family-classic);
+    content:"\f002";
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translatey(-50%);
+    font-size: 15px;
+    color: var(--grey-color);
+}
+
+.head .search input{
+    padding-left: 30px;
+    width: 180px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    margin-left: 5px;
+    transition: width .3s;
+
+}
+.head .search input:focus{
+    width: 220px;
+}
+.head .search input::placeholder{
+    transition: .3s;
+}
+.head .search input:focus::placeholder{
+    opacity: 0;
+}
+.head .icon .notification{margin-right: 10px;
+}
+.head .icon .notification::before{
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--red-color);
+    position: absolute;
+    top: -10px;
+    right: -5px;
+}
+.head .icon img{width: 32px;
+height: 30px;
+}
+.page h1{
+    margin: 20px 20px 40px;
+    width: fit-content;
+}
+.page h1::before{content: "";
+    position: absolute;
+bottom: -10px;
+left: 0;
+width: 150px;
+height: 2px;
+background-color: white;
+}
+.page h1::after{content: "";
+position: absolute;
+bottom: -10px;
+left: 0;
+width: 55px;
+height: 2px;
+background-color: black;
+transition: .3s;
+}
+.page h1:hover::after{left:100px;}
+
+.wrapper{
+    grid-template-columns: repeat(auto-fill,minmax(450px,1fr));
+margin-left: 20px;
+margin-right: 20px;
+}
+
+@media(max-width:767px){.wrapper{
+    grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    margin-left: 10px;
+    margin-right: 10px;
+}}
+
+.welcome{
+    overflow: hidden;
+}
+.welcome .intro img{
+    width: 200px;
+    margin-bottom: -10px;
+    animation: a 3s linear infinite;
+}
+.welcome > img{width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    border: 4px solid #ccc;
+    margin-left: 20px;
+    margin-top: -30px;
+}
+.welcome .body {border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+
+}
+.welcome .body  > div{
+    flex: 1;
+}
+.welcome .body > div > span {font-weight: normal;
+    display: block;
+}
+
+.welcome .visit{
+margin: 0 15px 15px auto;
+transition: .3s;
+padding: 5px 10px;
+}
+
+.welcome .visit:hover{
+    background-color: var(--blue-alt-color);
+}
+
+@media(max-width:767px){.welcome .intro{
+    padding-bottom: 30px;
+}
+.welcome .intro > div{
+text-align: center;
+width: 100%;
+margin-bottom: 20px;
+}
+}
+
+/* :start  Quick Draft*/
+.quick-draft textarea{
+    resize: none;
+    min-height: 180px;
+}
+.quick-draft .save{
+    margin-left: auto;
+   transition: .3s;
+   cursor: pointer;
+}
+.quick-draft .save:hover{
+    background-color: var(--blue-alt-color);
+}
+/* End Quick Draft*/
+/*start target */
+.target .icon{
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+}
+.target .detalis .progress{
+    height: 5px;
+
+}
+.target .detalis .progress > span{
+    position: absolute;
+   height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.target .detalis .progress > span span{
+    position: absolute;
+ bottom: 22px;
+ right: -16px;
+ border-radius: 8px;
+ font-weight: bold;
+ font-size: 13px;
+ padding: 4px 7px;
+}
+.target .detalis .progress > span span::after{
+    content: "";
+    position: absolute;
+    top: 22px;
+    left: 50%;
+    transform: translatex(-50%);
+    border: 10px solid transparent;
+    border-top-color: blue;
+}
+.target .detalis .progress > span .orange::after{
+    border-top-color: orange;
+}
+
+.target .detalis .progress > span .green::after{
+    border-top-color: var(--green-color);
+}
+.blue .icon,
+.blue .progress{
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.orange .icon,
+.orange .progress{
+    background-color: rgb(245 158 11 / 20%);
+
+}
+
+.green .icon,
+.green .progress{
+    background-color: hsl(142deg 71% 45% / 20%);
+}
+
+
+
+/*end target */
+
+/* animation */
+
+@keyframes a{50%{width: 180px;}
+100%{width: 200px;}}

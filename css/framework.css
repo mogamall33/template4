@@ -10,6 +10,34 @@
 .jf-betwen{
     justify-content: space-between;
 }
+
+.d-grid{
+    display: grid;
+}
+
+.gap-20{
+    gap: 20px;
+}
+
+.d-block{
+    display: block;
+}
+.flex-1{
+    flex: 1;
+}
+
+@media(max-width:767px){.block-mobile
+{
+    display: block;
+}}
+
+@media(max-width:767px){
+    .hide-mobile{
+        display: none;
+    }
+}
+
+
 /* end box */
 
 /* atart padding + margin */
@@ -19,15 +47,53 @@
 .p-20{
     padding: 20px;
 }
+.pt-20{
+    padding-top: 20px;
+}
+.pb-20{
+    padding-bottom: 20px;
+}
+.pr-10{
+    padding-right: 10px;
+}
 /* margin */
+.m-0{
+    margin: 0;
+}
 .m-20{margin: 20px;}
 
 .mt-0{
     margin-top: 0;
 }
+.mt-5{
+    margin-top: 5px;
+}
+.mt-10{
+    margin-top: 10px;
+}
+.mt-20{
+margin-top: 20px;
+}
+.mb-0{
+    margin-bottom: 0;
+}
+.mb-10{
+    margin-bottom: 10px;
+}
+
+.mb-20{
+    margin-bottom: 20px;
+}
 
 .rad-6{
     border-radius: 6px;
+}
+.rad-10{
+    border-radius: 10px;
+}
+
+.b-none{
+    border: none;
 }
 /* end padding + margin */
 
@@ -35,10 +101,43 @@
 .bg-white{
     background-color: white;
 }
+.c-blue{
+    color: blue;
+}
+.bg-ccc{
+    background-color: #ccc;
+}
+.bg-eee{
+    background-color: #eee;
+}
+.bg-blue{
+    background-color:var(--blue-color);
+}
+.bg-orange{
+    background-color: orange;
+}
+.bg-green{
+    background-color:var(--green-color);
+}
 
+
+.c-green{
+    color: var(--green-color);
+}
 .c-balck{
     color: black;
 }
+.c-grey{
+    color: var(--grey-color);
+}
+
+.c-white{
+    color: white;
+}
+.c-orange{
+    color:var( --orange-color);
+}
+
 /* end color */
 /*  start position */
 .p-relative{
@@ -54,6 +153,40 @@
 .fs-14{
     font-size: 14px;
 }
-
+.fs-15{
+    font-size: 15px;
+}
+.fs-20{
+    font-size: 20px;
+}
+@media(max-width:767px){.tl-c-mobile{
+    text-align: center;
+}}
+.fw-bold{
+    font-weight: bold;
+}
 /*end  font */
-
+/* start width */
+.w-fit{
+    width: fit-content;
+}
+.w-full{
+    width: 100%;
+}
+/* end width */
+/* conbounint */
+.between-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-shape{
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+/* conbounint */
